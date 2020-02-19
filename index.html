@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Destino Tomorrowland</title>
+    <link rel="icon" type="image/png" href="C:\Users\Usuario\Dropbox\Proyecto_web_Tomorrowland\Imágenes\tom_logo.png">
+    <style>
+        body{
+            font-family: 'Source Sans Pro', sans-serif;
+            margin: 0 200px;
+            background: #B5959F;
+        }
+        header {
+            background: #B5959F;
+            color: black;
+            display: flex;
+            height: 80px;
+            align-items: center;
+            justify-content:space-between;
+            margin: 0;
+        }
+        ol,
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .header a{
+            color: #8E0038;
+            text-decoration: none; /*quitar el subrayado del enlace*/
+            font-size: 25px;
+        }
+        .header ol{
+            display: flex;
+        }
+        .header a{
+            padding: 0 40px;
+        }
+        .container{
+            /*border: 1px solid red;*/
+            width: 100%;
+            max-width: 1500px;
+            margin: 0 auto;
+            display: inherit;
+            justify-content: inherit;
+            align-items: inherit;
+            height: auto;
+            flex-wrap: inherit;
+        }
+        .container-intro{
+            /*border: 1px solid red;*/
+            margin: 0 auto;
+            display: inherit;
+            justify-content: inherit;
+            align-items: inherit;
+            height: auto;
+            flex-wrap: inherit;
+        }
+        .container-final{
+            /*border: 1px solid red;*/
+            width: 100%;
+            max-width: 1500px;
+            margin: 0 auto;
+            display: inherit;
+            justify-content: inherit;
+            align-items: inherit;
+            height: auto;
+            flex-wrap: inherit;
+        }
+        .hero{
+            border: 2px solid #8E0038;
+            border-radius: 10px;
+            height: auto;
+            display: inherit;
+            align-items:center;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        /*.hero-image{
+            object-fit: cover;
+        }*/
+        h1{
+            font-size: 40px;       /*tamaño de la letra*/
+            line-height: 1.5em;    /*separación entre renglones*/
+            letter-spacing: -.2px;  /*espacio entre letras de una misma palabra*/
+            color: black;        /*color de la fuente*/
+            margin: 0;
+            /*margin: 100px 150px 70px 30px;*/          /*top right bottom left*/
+            /*text-transform: uppercase;*/ /*poner en minúscula o mayúscula*/
+            /*text-decoration: underline;*/ /*para subrayar, tachar, etc*/
+        }
+        h1 strong{
+            color: #8E0038; /*color de la letra del 'strong' */
+            font-size: 55px;
+        }
+        h1 strong1{
+            color: yellow; /*color de la letra del 'strong' */
+            font-size: 50px;
+        }
+        h1 strong2{
+            color: blue; /*color de la letra del 'strong' */
+            font-size: 50px;
+        }
+        h1 strong3{
+            color: red; /*color de la letra del 'strong' */
+            font-size: 50px;
+        }
+        .hero h2{
+            margin-top: 20px;
+        }
+        h2{
+            color:#3F4045;
+            text-transform: uppercase;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: bold;
+            font-size: 35px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        h3{
+            color: black;
+            text-transform: uppercase;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: bold;
+            font-size: 25px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .event-list{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .event{
+            margin: 10px;
+            width: 1500px;
+            flex-shrink: 0;  /*r*/
+            border-radius: 10px;
+            overflow: hidden;
+            background: #8E0038;
+            border: 2px solid white;
+            display: flex;
+        }
+        .event img{
+            /*max-width: 1500px;
+            max-height: 300px;
+            width: 100%;
+            height: 100%;*/
+            width: 500px;
+            height: 412px;
+            object-fit: cover;
+        }
+        .event-detail{
+            margin: 20px 20px;
+            background-color: #B5959F;
+            position: relative;
+            padding: 20px;
+            text-align: justify;
+            margin-left: -20px;
+        }
+        .event-detail-r{
+            margin: 20px 20px;
+            background-color: #B5959F;
+            position: relative;
+            padding: 20px;
+            text-align: justify;
+            margin-right: -20px;
+        }
+        .event-description{
+            text-align: justify;
+        }
+        figure{
+            margin: 0;
+        }
+        .social-link {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            margin: 10px 10px;
+            background-size: 50px 50px;
+        }
+        .social-link.twitter {
+            background-image: url(./Iconos/twitter_g.png);
+        }
+        .social-link.facebook{
+            background-image: url(./Iconos/facebook_g.png);
+        }
+        .social-link.instagram{
+            background-image: url(./Iconos/instagram_g.png);
+        }
+        .social-link.youtube{
+            background-image: url(./Iconos/youtube_g.png);
+        }
+        .main_container{
+            /*border: 1px solid red;*/
+            max-width: 1700px;
+            /*width: 100%;*/
+            flex: 1;
+            /*width: 1700px;*/
+            margin: 0 auto;
+            display: inherit;
+            justify-content: inherit;
+            align-items: inherit;
+            height: inherit;
+            flex-wrap: inherit;
+            background-color: transparent;
+        }
+        .footer{
+            color: white;
+            background-color: #8E0038;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .footer img{
+            vertical-align: middle;
+        }
+
+        .footer a{
+            color: white;
+        }
+        .footer p {
+            padding: 0 20px;
+        }
+        .contact{
+            background-color: #8E0038;
+            color: white;
+            height: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 15px;
+        }
+        .burguer-button{
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.1);
+            display: none;
+            line-height: 40px;
+            text-align: center;
+            position: fixed;
+            z-index:4;
+            left: 5px;
+            top: 5px;
+            color: transparent;
+            background-image: url(./Iconos/menu_g.png);
+            background-repeat: no-repeat;
+        }
+        @media screen and (max-width: 1562px){
+            body {
+                margin: 0 60px;
+            }
+            .event {
+                width: auto;
+                flex-shrink: initial;
+            }
+
+        }
+
+        @media screen and (max-width: 1440px){
+            
+        }
+        @media screen and (max-width: 1400px){
+            .header a {
+                font-size: 1.2em;
+                padding: 0 20px;
+            }
+            .event {
+                width: auto;
+                flex-shrink: initial;
+            }
+        }
+        @media screen and (max-width: 1240px){
+            .header a {
+                /*font-size: 0.95em;*/
+                padding: 0 12px;
+            }
+            .event{
+                width: auto;
+                flex-shrink: initial;
+                flex-direction: column;
+            }
+            .event-detail{
+                /*1em = 16px*/
+                /*margin: -40px 10px 10px 10px;*/
+                margin: -2em .5em .5em;
+                padding: 1em; 
+            }
+            .event-detail-r {
+                /* margin: -40px 10px 10px 10px; */
+                margin: 0.5em .5em -2em;
+                padding: 1em;
+            }
+            .event img{
+                width: 100%;
+            }
+        }
+        @media screen and (max-width: 1124px){
+            
+            h1 strong{
+                font-size: 1em;
+            }
+            h1 strong1{
+                font-size: 1em;
+            }
+            h1 strong2{
+                font-size: 1em;
+            }
+            h1 strong3{
+                font-size: 1em;
+            }
+            h1 strong4{
+                font-size: 0.8em;
+            }
+            h2 {
+                font-size: 31px;
+            }
+            p {
+                font-size: 0.95em;
+            }
+            .portfolio{
+                padding: 0;
+            }
+
+
+            .hero{
+                height: auto;
+                justify-content: center;
+                /*position: relative;
+                overflow: hidden;
+                padding: 2em;*/
+            }
+            /*.hero-image {
+                position: absolute;        para que la imagen quede de fondo y texto superpuesto
+                z-index: 1;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+            }*/
+            .main_container {
+                justify-content: center;
+            }
+            h1{
+                font-size: 2em;
+                
+                /*z-index: 2;            superpone el texto encima de la imagen de .hero-image*/
+            }
+            .hero1 h1 {
+                margin-left: 0px;
+                text-align: center;
+                
+            }                
+            .event-list-title {
+                padding-left: 0;
+            }
+            .hero-imageContainer{
+                width: 100%;
+                text-align: center;
+            }
+            .hero-imageContainer img {
+                margin: 0;
+            }
+            
+            .header {
+                flex-wrap: wrap;
+            }
+        }
+        
+        @media screen and (max-width: 767px){
+            .burguer-button{
+                display: block;
+                cursor: pointer;
+            }
+            .hero, .hero1 {
+                height: auto;
+                /*position: relative;*/                   
+            }
+            .hero1 h1 {
+                
+                text-align: center;
+            }
+            
+            h1{
+                font-size: 2em;
+                /*z-index: 2;            superpone el texto encima de la imagen de .hero-image*/
+            }
+            .header{
+                display: block;
+                height: auto;
+            }
+            .header ol{
+                display: block;
+            }
+            .header ol li{
+                height: 50px;
+            }
+            .header a{
+                display: block;
+                justify-content: center;
+                height: 40px;
+                font-size: 2em;
+                text-decoration: underline;
+                margin-bottom: .5em;
+            }
+            .header .logo {
+                text-align: center;
+            }
+            .menu{
+                position: fixed;
+                background: rgb(255, 255, 255, 0.8);
+                z-index: 3;
+                top: 0;
+                left: -100vw;
+                width: 100vw;
+                height: 50vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: 0.6s;
+            }
+            .menu.is-active{
+                left: 0;
+            }
+            .hero-imageContainer{
+                width: 100%;
+                text-align: center;
+            }
+            .event{
+                width: auto;
+                flex-shrink: initial;
+            }
+            /*.event-image{
+                width: 100%;
+            }*/
+            .event img{
+                width: 100%;
+            }
+        }
+        @media screen and (max-width: 513px){
+            .contact {
+                height: 230px;
+                display: flow-root;
+            }
+            .social {
+                text-align: center;
+            }
+        @media screen and (max-width: 480px){
+            /*h1 {
+                font-size: 1em;
+            }*/
+            body {
+                margin: 0 20px;
+            }
+            .hero-imageContainer{
+                width: 100%;
+                text-align: center;
+            }
+            .hero-imageContainer img {
+                margin: 0;
+            }
+            .event-detail{
+                /*1em = 16px*/
+                /*margin: -40px 10px 10px 10px;*/
+                margin: -2em .5em .5em;
+                padding: 1em; 
+            }
+            .contact{
+                height: auto;
+                padding: 1.5em 0;
+                text-align: center;
+                display: block;
+            }
+            .form-email button{
+                margin: 1em auto;
+            }
+            .form-email h3{
+                margin-top: 0;
+            }
+            footer{
+                display: block;
+                text-align: center;
+                border: 1px solid transparent;
+            }
+            .container{
+                display: block;
+                text-align: center;
+                font-weight: bold;
+            }
+            .contact p {
+                margin-left: 0px;
+                display: flow-root;
+            }
+            .footer p {
+                margin-left: 0px;
+            }
+            .event-list-title-1 {
+                padding-left: 0px;
+            }
+        }
+        /*desktop first: empezar desde el MQ más grande*/
+        @media screen and (max-width: 320px){
+            h1{
+                font-size: 1.8em;
+                /*background: rgba(0,0,0,0.5)*/
+            }
+            .hero{
+                padding: 1em 1em;
+            }
+            h1 strong{
+                font-size: 0.9em;
+            }
+            h1 strong1{
+                font-size: 0.9em;
+            }
+            h1 strong2{
+                font-size: 0.9em;
+            }
+            h1 strong3{
+                font-size: 0.9em;
+            }
+            h1 strong4{
+                font-size: 0.8em;
+            }
+            h2 {
+                font-size: 25px;
+            }
+            p {
+                font-size: 0.85em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+    <i class="icon-menu burguer-button" id="burguer-menu"></i>
+        <div class="main_container">
+            <figure class="logo">
+                <img src="Imágenes\tom_logo.png" height="50" alt="Tomorrowland"/>
+            </figure>
+            <nav class="menu">
+                <ol>
+                     <li>
+                        <a class="link" href="https://camiloguzman91.github.io/destinotomorrowland/">Inicio</a>
+                    </li>
+                    <li>
+                        <a class="link" href="#Guia">Guía</a>
+                    </li>
+                    <li>
+                        <a class="link" href="https://camiloguzman91.github.io/destinotomorrowland-galeria/">Galería fotográfica</a>
+                    </li>
+                    <li>
+                        <a class="link" href="https://camiloguzman91.github.io/destinotomorrowland-videos/">Videos</a>
+                    </li>
+                    <li>
+                        <a class="link" href="#Contacto">Contacto</a>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="container">
+            <h2>Información preliminar</h2>
+            <p class="event-description">Esta guía está basada en mi experiencia durante la asistencia al festival en el año 2018, así que, los precios y planes podrían variar a medida que transcurren los años. Así mismo, 
+            a continuación se describirá según <strong>mi experiencia</strong> los pasos que seguí, según lo que consideré más conveniente. Para más información, ingresar a la página <a class="link" href="https://www.tomorrowland.com/global/">www.tomorrowland.com/global/</a>
+            o contactarme por medio de mis redes sociales, ubicadas en la parte inferior de la presente página.</p> 
+
+        </div>
+    </section>
+    <section id="Inicio1" class="Introduction">
+        <div class="container-intro">
+            <h2>Guía</h2>
+        </div>
+    </section>
+    <section id="Inicio" class="event-list">
+        <div class="container">
+            <article class="event">
+                <figure class="event-imageContainer">
+                    <img class="event-image" src="./Imágenes/manilla.jpg" width="500"/>
+                </figure> 
+                <div class="event-detail">                   
+                    <p class="event-description">Inicialmente, se requiere realizar el pre registro en la página web de Tomorrowland desde el mes de diciembre anterior al año del festival al que se quiere asistir; esto se puede hacer hasta mediados de enero.</p> <p>
+                    Posterior al pre registro, Tomorrowland envía un link al correo para realizar el registro oficial. La venta de ticketes usualmente se distribuye de la siguiente manera:</p>
+                    <ol>
+                        <li>- Penúltimo sábado de enero: Venta Global Journey (Paquetes que incluyen hotel o transporte)</li>
+                        <li>- Último sábado de enero: Pre venta mundial (Paquetes que incluyen estancia en Dreamville)</li>
+                        <li>- Primer sábado de febrero: Venta mundial (Paquetes que incluyen estancia en Dreamville), precios un poco más altos.</li>
+                    </ol>
+                </div>
+            </article>
+            <article class="event">
+                <div class="event-detail-r">                   
+                    <p class="event-description">Personalmente recomiendo comprar el plan de la etapa Global Journey debido a que, como es bien conocido, los tiquetes se acaban en cuestión de minutos a partir de que salen a la venta, entonces con
+                    el de Global Journey hay mayor probabilidad de poder comprar uno de estos. Para tener mayor seguridad sobre el presupuesto, Tomorrowland envía al correo registrado un link para realizar la simulación de los 
+                    precios de cada paquete, previo a la venta oficial.</p> </p>Yo compré el plan de Global Journey que incluía: Pase para todos los tres días del segundo fin de semana del festival, hotel en Bruselas (Meininger), desayunos, 
+                    transporte hotel &lt -- &gt Tomorrowland. La manilla (la cual permite el ingreso a Tomorrowland y comprar cosas en el festival) llega aproximadamente en junio a la dirección diligenciada en el registro, ésta se recarga
+                    comprando la modena oficial "perla".</p>
+                </div>
+                <figure class="event-imageContainer">
+                    <img class="event-image" src="./Imágenes/manilla_2.jpg" width="500"/>
+                </figure> 
+            </article>
+            <article class="event">
+                <figure class="event-imageContainer">
+                    <img class="event-image" src="./Imágenes/escenario.jpg" width="500"/>
+                </figure> 
+                <div class="event-detail">                   
+                    <p class="event-description">Para ir hasta Bélgica, viajé en la aerolínea Air Europa (Bogotá-Madrid-Bruselas). En Bruselas es aconsejable tomar el transporte público el cual tiene un precio de 3 euros por viaje, debido a que el
+                    servicio de taxi o uber es considerablemente costoso. Al llegar al hotel hay personal de Tomorrowland, el cual lo recibe a uno para dar las respectivas indicaciones y entregar diferentes elementos (maleta oficial, diario y una
+                    caja de cartas de póker). El horario de salida del transporte hacia el festival es de 12:00 hasta las 13:00, por lo cual hay que estar bastante pendiente para no perder el bus, pero en el caso de que esto suceda, hay personal particular
+                    que realiza el viaje pero a un precio elevado.</p> <p>Al llegar al parque que aloja a este evento hay que pasar por diferentes controles de seguridad los cuales son muy estrictos, por eso se recomienda totalmente no tratar de ingresar 
+                    algún tipo de sustancia o elemento ilícito. Si no hubo problemas con esto, oficialmente se ha ingresado a Tomorrowland, lo cual a primera vista resulta increible. Dentro del evento se pueden encontrar alrededor de 18 escenarios, en los cuales
+                    hay DJ's presentando diferentes estilos de música eletrónica. Recomiendo tratar de asistir a cada uno de ellos, debido a que tienen temáticas geniales, y no estar solamente en el Mainstage.</p>
+                </div>
+            </article>
+            <article class="event">
+                <div class="event-detail-r">                   
+                    <p class="event-description"> No solamente la música es fantástica en el festival, ya que la gente que asiste es muy amable y se pueden realizar intercambios culturales, lo que hace que el ambiente sea muy agradable. Otra cosa que resulta ser
+                    excepcional es la comida y la bebida, hay gran variedad de platos de todo el mundo con sabores deliciosos, además que es muy aconsejable estar hidratado en todo momento, ya que, hay que estar en constante movimiento y la temperatura suele ser
+                    muy elevada en esa época del año.</p> <p>Como conclusión, asistir a Tomorrowland es una de las mejores experiencias que se puede tener en la vida, son momentos inolvidables los que se pasan allá, al punto de no querer abandonar nunca el evento.</p>
+                    </br><p>Enjoy it!</p>
+                </div>
+                <figure class="event-imageContainer">
+                    <img class="event-image" src="./Imágenes/bebida.jpg" width="500"/>
+                </figure> 
+            </article>
+        </div>
+    </section>
+    <section id="Contacto" class="contact">
+        <div class="container-final">
+            <form action="/Contacto/" class="form-email">
+                    <h3 class="event-list-title-1">Contacto</h3>
+                    <!--<p><small><strong>Ciudad de residencia: </strong>Bogotá D.C., Colombia</small></small></p>-->
+                    <p><small><strong>Correo electrónico: </strong>camiloge_91@hotmail.com</small></small></p>
+                    <p><small><strong>Número celular: </strong>-----</small></small></p>
+                    <!--<label for="e-mail">Contacto</label>-->
+                    <!--<input type="text" placeholder="Déjanos tu e-mail" id="e-mail">-->
+                    <!--<input type="submit" value="Button text">-->
+                    <!--<button>Enviar</button>-->
+                </form>
+            <div class="social">
+                    <a href="https://twitter.com/camiloguzman_91" class="social-link twitter" target="_blank"></a>
+                    <a href="https://www.facebook.com/Camilo.Guzman91" class="social-link facebook" target="_blank"></a>
+                    <a href="https://www.instagram.com/camiloguzman_91/" class="social-link instagram" target="_blank"></a>
+                    <a href="https://www.youtube.com/channel/UCVsWK0bZ2ya6eAK7LjBtDQg?view_as=subscriber" class="social-link youtube" target="_blank"></a>
+                </div>
+         </div>
+    </section>        
+    <footer class="footer">
+        <div class="container">
+            <div>
+                <p>
+                    Destino Tomorrowland. 2020 <img src=".\Imágenes\tom_logo_n.png" width="25" alt="Logo">
+                </p>
+                </div>
+                <div>
+                <p>
+                    Designed by <a href="https://twitter.com/camiloguzman_91" target="_blank">@camiloguzman_91</a>
+                </p>
+            </div>            
+        </div>
+    </footer>
+    <script>
+    /*console.log('amazing');*/
+    const ipad = window.matchMedia('screen and (max-width: 767px)');
+    const menu = document.querySelector('.menu')
+    /*console.log(menu);*/
+    const burguerButton = document.querySelector('#burguer-menu');
+    /*console.log(burguerButton);*/
+    ipad.addListener(validation)
+    function validation(event){
+        if(event.matches) {
+        burguerButton.addEventListener('click',hideShow)
+        } else {
+        burguerButton.removeEventListener('click',hideShow)
+        }
+    }
+    validation (ipad);
+    function hideShow(){
+        if(menu.classList.contains('is-active')){
+            menu.classList.remove('is-active');
+        } else{
+        menu.classList.add('is-active');
+        }
+    }
+</script> 
+</body>
+</html>
